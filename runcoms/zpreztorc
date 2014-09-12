@@ -163,6 +163,7 @@ alias bo='brew outdated'
 alias bU='brew upgrade && brew cleanup --force'
 alias bs='brew search'
 alias bi='brew info'
+alias bI='brew install'
 alias lv='ls -lahGF'
 
 # allows pretty printing $ cat myFile.json | json > out.json
@@ -171,3 +172,6 @@ alias json='python -mjson.tool'
 
 # roo doesn't run on my default java 8
 alias roo='export JAVA_HOME=$(/usr/libexec/java_home -v 1.7) && roo'
+
+# http://zsh.sourceforge.net/Doc/Release/Options.html
+setopt HIST_IGNORE_ALL_DUPS
