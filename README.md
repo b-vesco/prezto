@@ -21,11 +21,26 @@ version is 4.3.11.
 
   3. Create a new Zsh configuration by copying the Zsh configuration files
      provided:
-
+```
         setopt EXTENDED_GLOB
         for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
           ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
         done
+```
+  3. Install some powerline fonts using homebrew cask
+  ```
+  # make sure you have hombrew cask installed
+  brew install caskroom/cask/brew-cask
+  brew cask update
+
+  # tap the fonts and see what's available
+  brew tap caskroom/fonts
+  brew cask search /powerline/
+
+  # install whatever you want like:
+  brew cask install font-dejavu-sans-mono-for-powerline
+  ```
+  Be sure to set the font in your iTerm prefs under "Profiles" => "Text"
 
   4. Set Zsh as your default shell:
 
